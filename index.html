@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS Grid starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container>div {
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                display: grid;
+                /* grid-template-columns: 200px 200px 200px; */
+                grid-gap: 5px;
+                grid-template-areas:
+                    'a a a'
+                    'b c d'
+                    'b e e'
+                    'f f g'
+                    'h h h';
+
+
+            }
+        }
+
+
+
+        .a {
+            grid-area: a;
+            /* 指定当前元素所在的区域位置，从 grid-template-areas 选取值 */
+            background-color: #D02477;
+        }
+
+        .b {
+            grid-area: b;
+            background-color: #7E78B5;
+        }
+
+        .c {
+            grid-area: c;
+            background-color: #8496CE;
+        }
+
+        .d {
+            grid-area: d;
+            background-color: #9DD9E0;
+        }
+
+        .e {
+            grid-area: e;
+            background-color: #D397DB;
+        }
+
+        .f {
+            grid-area: f;
+            background-color: #D02477;
+        }
+
+        .g {
+            grid-area: g;
+            background-color: #7E78B5;
+        }
+
+        .h {
+            grid-area: h;
+            background-color: #8496CE;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="a">1</div>
+        <div class="b">2</div>
+        <div class="c">3</div>
+        <div class="d">4</div>
+        <div class="e">5</div>
+        <div class="f">6</div>
+        <div class="g">7</div>
+        <div class="h">8</div>
+    </div>
+
+</body>
+
+</html>
